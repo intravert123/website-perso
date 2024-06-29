@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #eaeaea;
+}
+
+.stars {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://i.ibb.co/Khg4TK7/stars.png') repeat top center;
+    transform: translateX(-50%);
+    animation: star-move 100s linear infinite;
+}
+
+@keyframes star-move {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+    to {
+        transform: translate3d(-50%, 100%, 0);
+    }
+}
+
+header {
+    background-color: rgba(40, 167, 69, 0.9);
+    padding: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+main .row:nth-child(2) {
+    margin-top: 40px;
+}
+
+main .col-md-4 img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+main .col-md-8 h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+main .col-md-8 p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Meeting Summary Boxes */
+.meeting-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.meeting-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.meeting-box h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.meeting-box:hover {
+    transform: scale(1.05);
+}
+
+/* Additional styles */
+.dropdown-menu a {
+    color: #000;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(40, 167, 69, 0.5);
+}
